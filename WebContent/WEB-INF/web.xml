@@ -20,7 +20,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DruidStatView</servlet-name>
-		<url-pattern>/druid.j/*</url-pattern>
+		<url-pattern>/druid.i/*</url-pattern>
 	</servlet-mapping>
   
   
