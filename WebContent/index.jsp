@@ -4,13 +4,9 @@
 <html>
 <head>
 <%@include file="common/jsp/public.jsp"%>
-<style type="text/css">
-.list-group {
-	padding-left: 0;
-	margin-bottom: 0px;
-}
-</style>
-
+<link href="${root}/common/css/ace.min.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="${root}/common/js/ace.min.js"></script>
+<script language="JavaScript" src="${root}/common/js/ace-extra.min.js"></script>
 </head>
 <body>
 
@@ -20,135 +16,344 @@
 					<a href="#" class="navbar-brand">
 						<small>
 							<i class="icon-leaf"></i>
-							善拓后台管理系统
+							车主APP管理平台 
 						</small>
 					</a><!-- /.brand -->
 				</div><!-- /.navbar-header -->
-		
 				<div class="navbar-header pull-right" role="navigation">
-				
-				<a href="#" onclick="goifm('report_review.jsp')" class="navbar-brand">
-					<small> 审阅:<span id="shenyue" >0</span></small>
-				</a>
-				<a href="#" onclick="goifm('waring_history.jsp')" class="navbar-brand">
-					<small> 报警:<span id="warning" >0</span></small>
-				</a>
-				
-				<a href="#" class="navbar-brand">
-					<small><button onclick="logout()" class="btn btn-info">退出</button> </small>
-				</a>	
-				</div><!-- /.navbar-header -->
-			</div>
-		</div>
+					<ul class="nav ace-nav">
+						<li class="grey">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
 
-		<div class="main-container" id="main-container">
-		
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-ok"></i>
+									4 Tasks to complete
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:65%" class="progress-bar "></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See tasks with details
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-bell-alt icon-animated-bell"></i>
+								<span class="badge badge-important">8</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-warning-sign"></i>
+									8 Notifications
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-pink icon-comment"></i>
+												New Comments
+											</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="btn btn-xs btn-primary icon-user"></i>
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
+												New Orders
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-info icon-twitter"></i>
+												Followers
+											</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See all notifications
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="green">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-envelope-alt"></i>
+									5 Messages
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Alex:</span>
+												Ciao sociis natoque penatibus et auctor ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>a moment ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Susan:</span>
+												Vestibulum id ligula porta felis euismod ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>20 minutes ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Bob:</span>
+												Nullam quis risus eget urna mollis ornare ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>3:15 pm</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										See all messages
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+				
+</div>
+<div class="main-container" id="main-container">
+			
+
 			<div class="main-container-inner">
 				<a class="menu-toggler" id="menu-toggler" href="#">
 					<span class="menu-text"></span>
 				</a>
 
-				<div id="div_daohang" class="sidebar" id="sidebar">
-
+				<div class="sidebar" id="sidebar">
 					<ul id="ulList" class="nav nav-list">
-						<li id="qx1" class="open">
-							<a href="#"  class="dropdown-toggle">
-								<i class="glyphicon glyphicon-cog"></i><span class="menu-text">账号管理 </span>
-								<b class="arrow icon-angle-down"></b>
-							</a>
-							<ul  class="submenu">
-								<li id="qx2" ><a href="#" onclick="goifm('account_company.jsp')"><i class="icon-double-angle-right"></i>公司管理</a></li>
-								<li id="qx3"><a href="#" onclick="goifm('account_project.jsp')"><i class="icon-double-angle-right"></i>项目管理</a></li>
-								<li id="qx4"><a href="#" onclick="goifm('ar')"><i class="icon-double-angle-right"></i>角色管理</a></li>
-								<li id="qx5"><a href="#" onclick="goifm('au')"><i class="icon-double-angle-right"></i>用户管理</a></li>
-								<li id="qsx18"><a href="#" onclick="goifm('qiandao.jsp')"><i class="icon-double-angle-right"></i>签到管理</a></li>
-							</ul>
-						</li>
-						<li id="qx6"> 
-							<a href="#"  class="dropdown-toggle">
-								<i class="icon-group" ></i><span class="menu-text">外场人员管理</span>
-								<b class="arrow icon-angle-down"></b>
-							</a>
-							<div id="tree" style="display: none;">
-							</div>
-							
-						</li>
-						<li id="qx7">
-							<a href="#" class="dropdown-toggle"> 
-								<i class="glyphicon glyphicon-edit"></i><span class="menu-text">任务管理 </span>
-								<b class="arrow icon-angle-down"></b>
-							</a>
-							<ul class="submenu">
-								<li id="qx8"><a href="#" onclick="goifm('task_rewoard.jsp')" ><i class="icon-double-angle-right"></i>奖励措施</a></li>
-								<li id="qx9"><a href="#" onclick="goifm('task.jsp')"><i class="icon-double-angle-right"></i>任务设定</a></li>
-								<li id="qx10"><a href="#" onclick="goifm('task_over.jsp')"><i class="icon-double-angle-right"></i>任务统计</a></li>
-							</ul>
-						</li>
-						<li  id="qx11">
-							<a href="#" onclick="goifm('leave_electric.jsp')"  class="dropdown-toggle">
-								<i class="glyphicon glyphicon-phone-alt"></i><span class="menu-text">留电管理 </span>
-							</a>
-						</li>
-						<li  id="qx14">
-							<a href="#" onclick="goifm('car_apply.jsp')"  class="">
-								<i class="icon-dashboard"></i><span class="menu-text">用车申请 </span>
-							</a>
-						</li>
-						<li  id="qx16">
-							<a href="#" onclick="goifm('report_review.jsp')" class="">
-								<i class="glyphicon glyphicon-check"></i><span class="menu-text">审阅</span>
-							</a>
-						</li>
-						<li id="qx15" class="">
-							<a href="#" onclick="goifm('report')" class="">
-								<i class="icon-hdd"></i><span class="menu-text">上报 </span>
-							</a>
-						</li>
-						<li  id="qx17">
-							<a href="#" class="dropdown-toggle">
-								<i class="glyphicon glyphicon-record"></i><span class="menu-text">预警 </span>
-								<b class="arrow icon-angle-down"></b>
-							</a>
-							<ul class="submenu"> 
-								<li><a href="#" onclick="goifm('warn')" ><i class="icon-double-angle-right"></i>划定预警圈</a></li>
-								<li><a href="#" onclick="goifm('waring_history.jsp')"><i class="icon-double-angle-right"></i>报警历史记录</a></li>
-							</ul>
-						</li>
+						
 					</ul>
 
-					<div class="sidebar-collapse" id="">
-						<i class="icon-double-angle-left"></i>  
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
 					</div>
+				
 				</div>
-			</div>
-		</div>
 
-	<div class="main-content">
-		<div class="breadcrumbs" id="breadcrumbs">
-				<div style="float: left;margin-left: 20px;">实时动态：</div>
-				<div style="float: left;height: 20px"> 
-					<marquee direction="left" scrollamount="3" onmouseover="this.stop"
-						onmouseout="this.start" style="position:relative;">
-					 	<span 
-							style="color: black;font-size: 18px;position:relative;cursor: pointer;">当前小蜜蜂任务完成数量总数:<font
-							color="red"><span id="SumOrder">0</span>
-						</font>
-						</span>
-					</marquee>
-				</div>
-				<div style="float: right; font-size: 18px">登录用户 ：<i style="color: blue;">d</i></div>
-			</div>
+				<div id="main_content" class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
 
-		<div id="iframediv" style="width: 100%;">
-			<iframe id="iframe" width="100%" height="100%;" name="iframe"
-				style="" scrolling="auto" frameborder="0" src="welcome.jsp">
+							<li>
+								<a href="#">Other Pages</a>
+							</li>
+							<li class="active">Blank Page</li>
+						</ul><!-- .breadcrumb -->
 
-			</iframe>
-		</div>
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+									<iframe id="iframe" width="100%"  name="iframe" style="" 	scrolling="auto" frameborder="0" src="test.jsp">
+									
+									</iframe> 
+					</div>
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			
+		</div><!-- /.main-container -->
 
 	</div>
+</div>
 </body>
 <script type="text/javascript">
-	
+$(function(){
+	var heigth = $(window).height();
+	var width = $(window).width();
+	$("#iframe").height(heigth -150);
+	loadmenu($("#ulList"),[{text:"第一个菜单",notes:[{text:"第一个菜单的之1"},{text:"第一个菜单的之2"}]},{text:"第二个查单"}]);
+});
+
+  function loadmenu(menu,note){
+	 $.each(note,function(i,o) {
+		 o.icon=o.icon||"glyphicon glyphicon-cog";
+		if(o.notes==null){
+			menu.append('<li><a href="#" onclick="goifm(\''+o.url+'\')" ><i class="'+o.icon+'"></i><span class="menu-text">'+o.text+'</span></a></li>')
+		}else{
+			var $li=$('<li ><a href="#" class="dropdown-toggle"><i class=\''+o.icon+'\'></i><span class="menu-text">'+o.text+'</span><b class="arrow icon-angle-down"></b></a>');
+			var $ul=$('<ul class="submenu"></ul>');
+				$.each(o.notes,function(j,n) {   
+					 n.icon=n.icon||"glyphicon glyphicon-cog";
+					$ul.append('<li><a href="#" onclick="goifm(\''+n.url+'\')" ><i class="icon-double-angle-right"></i>'+n.text+'</a></li>');
+				});
+			$li.append($ul);
+			menu.append($li);
+		}
+	});
+ }
 </script>
 </html>
