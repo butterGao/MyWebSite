@@ -11,11 +11,14 @@
 <input type="hidden" id="root" value="${root}">
 <!-- 样式 -->
 <link href="${root}/common/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="${root}/common/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 <link href="${root}/common/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="${root}/common/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+<link href="${root}/common/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+<link href="${root}/common/css/tableWin.css" rel="stylesheet" type="text/css">
 <!-- 脚本 -->
 <script language="JavaScript" src="${root}/common/js/jquery-2.0.3.min.js"> </script>
 <script language="JavaScript" src="${root}/common/js/bootstrap.min.js"></script>
 <script language="JavaScript" src="${root}/common/js/bootstrap-table.js"></script>
+<script language="JavaScript" src="${root}/common/js/bootstrap-datetimepicker.min.js"></script>
 <script language="JavaScript" src="${root}/common/js/public.js"></script>
+<script language="JavaScript" src="${root}/common/js/tableWin.js"></script>

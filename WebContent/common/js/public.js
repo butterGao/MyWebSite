@@ -1,5 +1,5 @@
 
-var root=getval("#root");//项目根路径
+var root=getval("root");//项目根路径
 
 /**
  * @param name
@@ -49,6 +49,8 @@ function cheRadio(id){
 	$("input[id^=cge]").attr("checked", false);
 	
 }
+
+
 function addInfos(id,msg){
 	("#"+id).addClass("has-error");
 	$("#"+id).append('<label name="infos" class="control-label" >'+msg+'</label>');

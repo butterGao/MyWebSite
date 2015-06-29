@@ -20,6 +20,7 @@
 						</small>
 					</a><!-- /.brand -->
 				</div><!-- /.navbar-header -->
+				<!-- 导航右边菜单 -->
 				<div class="navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey">
@@ -269,6 +270,7 @@
 						</li>
 					</ul><!-- /.ace-nav -->
 				</div><!-- /.navbar-header -->
+				<!-- /导航右边菜单 -->
 			</div><!-- /.container -->
 				
 </div>
@@ -315,8 +317,8 @@
 						</div><!-- #nav-search -->
 					</div>
 
-					<div class="page-content">
-									<iframe id="iframe" width="100%"  name="iframe" style="" 	scrolling="auto" frameborder="0" src="test.jsp">
+					<div class="page-content" >
+									<iframe id="iframe" width="100%"  name="iframe" 	scrolling="auto" frameborder="0" src="test.jsp">
 									
 									</iframe> 
 					</div>
@@ -334,7 +336,7 @@
 $(function(){
 	var heigth = $(window).height();
 	var width = $(window).width();
-	$("#iframe").height(heigth -150);
+	$("#iframe").height(heigth -110);
 	loadmenu($("#ulList"),[{text:"第一个菜单",notes:[{text:"第一个菜单的之1"},{text:"第一个菜单的之2"}]},{text:"第二个查单"}]);
 });
 
